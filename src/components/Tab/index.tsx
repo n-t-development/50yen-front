@@ -78,7 +78,6 @@ const ScrollableTabBar: React.SFC<Props> = ({ items, onClick }) => (
                 <ListItem key={i.url} active={i.active}>
                     {onClick ? (
                         <StyledButton
-                            // tslint:disable-next-line jsx-no-lambda
                             onClick={() => onClick(i.url)}
                             active={i.active}
                             disabled={i.active}
