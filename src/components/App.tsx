@@ -25,7 +25,7 @@ export const App = () => {
             <Router history={history}>
                 <Route exact path='/' component={Top} />
                 <Route exact path='/list' component={List} />
-                <Route exact path='/details' component={Details} />
+                <Route exact path='/detail' component={Details} />
                 <Route exact path='/post' component={PostPage} />
             </Router>
         </Root>

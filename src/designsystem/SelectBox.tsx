@@ -38,7 +38,6 @@ const SelectionIconBox = styled.label<{ highlight: boolean }>`
 const Select = styled.select<{
     inToolbar: boolean;
     isEmpty?: boolean;
-    useIcon: boolean;
     highlight?: boolean;
 }>`
   /* 16pxより小さいとiOSのズーム機能が有効になる */
@@ -97,11 +96,6 @@ export const Selectbox: React.SFC<Props> = ({
         : options;
     return (
         <SelectRoot inToolbar={inToolbar} className={className}>
-            {icon && (
-                <SelectionIconBox htmlFor={id} highlight={highlight}>
-                    {icon}
-                </SelectionIconBox>
-            )}
             <Select
                 id={id}
                 name={name}
@@ -109,7 +103,6 @@ export const Selectbox: React.SFC<Props> = ({
                 required={!allowEmpty}
                 value={value}
                 inToolbar={inToolbar}
-                useIcon={!!icon}
                 highlight={highlight}
                 isEmpty={allowEmpty === true && (value === undefined || value === '')}
                 ref={inputRef}
