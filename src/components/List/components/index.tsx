@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Root, ListBox, Title, ListItem, Section, ItemTitle, Text, DataTime, StyleLink } from "./elements";
+import { Root, TabBox, ListBox, Title, ListItem, Section, ItemTitle, Text, DataTime, StyleLink } from "./elements";
 import format from 'date-fns/format';
+import { Header } from "../../Header";
 // 後々DBから取得するデータ仮で登録
 const items = [
     {
@@ -22,7 +23,6 @@ const items = [
 ]
 const DATE_AND_TIME = 'yyyy-MM-dd';
 async function postData(url = '', data = {}) {
-    console.log("####");
     // 既定のオプションには * が付いています
     const response = await fetch('https://vmdsdute17.execute-api.us-east-2.amazonaws.com/RESTAPITEST?myParam=myValue', {
         method: 'GET',
@@ -30,7 +30,6 @@ async function postData(url = '', data = {}) {
         credentials: 'include'
     })
         .then((response) => {
-            console.log(response);
             return response; // レスポンスをテキストとして変換する
         })
         .then((json) => console.log(json))
@@ -48,6 +47,9 @@ export const List = () => {
 
     return (
         <Root >
+            <TabBox>
+                <Header />
+            </TabBox>
             <Section>
                 <Title>
                     〇〇一覧　←開いているリストの名前をいれる
@@ -55,7 +57,7 @@ export const List = () => {
                 {items.map((item) =>
                     <ListBox>
                         <ListItem>
-                            <StyleLink to={'/list/detail'}>
+                            <StyleLink to={'/detail'}>
                                 <ItemTitle>{item.title}</ItemTitle>
                                 <Text>{item.text}</Text>
                                 <DataTime>{format(new Date(item.startDateTime), DATE_AND_TIME)}</DataTime>

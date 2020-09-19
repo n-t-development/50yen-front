@@ -5,6 +5,9 @@ export const Root = styled.div`
     height: auto;
     margin: 20px 0;
 `;
+export const TabBox = styled.div`
+    margin-top: 20px;
+`;
 
 export const Section = styled.section`
     border-top: 1px solid #ebebeb;
