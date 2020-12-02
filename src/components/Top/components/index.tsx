@@ -8,18 +8,7 @@ export const Top = () => {
     return (
         <Root >
             <LogoBox>
-                <Logo />
             </LogoBox>
-            <LogoBox>
-                <PostButton to={'/post'}>投稿</PostButton>
-            </LogoBox>
-            <div><Link to={'/list'}>一覧</Link></div>
-            <div>投稿</div>
-            <div></div>
-            <div></div>
-            <br /><br /><br /><br /><br />
-            ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br />
-            この下にコメントランキングと新着順5個づつ表示
         </Root>
     )
 }

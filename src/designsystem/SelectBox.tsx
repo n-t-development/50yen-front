@@ -40,7 +40,7 @@ const Select = styled.select<{
     isEmpty?: boolean;
     highlight?: boolean;
 }>`
-  /* 16pxより小さいとiOSのズーム機能が有効になる */
+  font-size: 16px;
   appearance: none;
   border: 1px solid black;
   background: transparent;

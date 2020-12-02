@@ -22,7 +22,7 @@ const items = [
     }
 ]
 const DATE_AND_TIME = 'yyyy-MM-dd';
-async function postData(url = '', data = {}) {
+async function getData(url = '', data = {}) {
     // 既定のオプションには * が付いています
     const response = await fetch('https://vmdsdute17.execute-api.us-east-2.amazonaws.com/RESTAPITEST?myParam=myValue', {
         method: 'GET',
@@ -39,7 +39,7 @@ async function postData(url = '', data = {}) {
 }
 
 export const List = () => {
-    postData('https://vmdsdute17.execute-api.us-east-2.amazonaws.com/RESTAPITEST?myParam=myValue')
+    getData('https://vmdsdute17.execute-api.us-east-2.amazonaws.com/RESTAPITEST?myParam=myValue')
         .then(data => {
             console.log(data); // `data.json()` の呼び出しで解釈された JSON データ
         });

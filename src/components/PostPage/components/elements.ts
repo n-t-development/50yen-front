@@ -46,6 +46,7 @@ export const TextArea = styled.textarea`
     padding: 8px;
     resize: vertical;
     border: 1px solid;
+    font-size: 16px;
 `;
 
 export const TitleArea = styled.input`
@@ -56,6 +57,8 @@ export const TitleArea = styled.input`
     padding: 8px;
     resize: vertical;
     border: 1px solid;
+    font-size: 20px;
+    autocomplete: off;
 `;
 export const Text = styled.p`
 
@@ -72,4 +75,5 @@ export const SubmitButton = styled.button`
     text-transform: uppercase;
     border: 1px solid black;
     width: 100%;
+    height: 44px;
 `;

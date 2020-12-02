@@ -6,7 +6,7 @@ export const Logo = () => {
 
     return (
         <Box >
-            ロゴ
+            Talkative
         </Box>
     )
 }

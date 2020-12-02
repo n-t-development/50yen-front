@@ -16,12 +16,18 @@ const Root = styled.div`
     max-width: 1080px;
     margin: 0 auto;
 `;
+const LogoBox = styled.div`
+
+`;
 export const MenuModal = () => {
 
 }
 export const App = () => {
     return (
         <Root>
+            <LogoBox>
+                <Logo />
+            </LogoBox>
             <Router history={history}>
                 <Route exact path='/' component={Top} />
                 <Route exact path='/list' component={List} />
