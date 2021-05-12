@@ -27,7 +27,7 @@
     "jest": "^25.1.0",
     "react-id-swiper": "^2.3.2",
     "source-map-loader": "^0.2.4",
-    "swiper": "^5.3.8",
+    "swiper": "^6.5.1",
     "ts-loader": "^7.0.1",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
